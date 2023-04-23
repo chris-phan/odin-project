@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar {
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #1F2937;
+}
+
+.container {
+    display: flex;
+}
+
+.container > #header-logo {
+    flex: 1 1 auto;
+    justify-self: flex-start;
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+.container > .nav-links {
+    display: flex;
+    flex: 1 1 auto;
+    justify-self: flex-end;
+    justify-content: right;
+    align-content: flex-end;
+    gap: 30px;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.nav-links > a {
+    align-self: flex-end;
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+.section-one {
+    background-color: #1F2937;
+    padding: 120px 15%;
+    padding-bottom: 150px;
+}
+
+.section-one .container {
+    display: flex;
+    gap: 50px;
+}
+
+.section-one .container .flex-item {
+    flex: 1 1 0;
+    width: 0;
+}
+
+.section-one .container div h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+    margin-bottom: 10px;
+}
+
+.section-one .container div p {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin-bottom: 10px;
+}
+
+.section-one .container div button {
+    background-color: #3882F6;
+    color: #F9FAF8;
+    font-size: 18px;
+    border: none;
+    border-radius: 7px;
+    padding: 7px 30px;
+}
+
+.section-one .container .placeholder-img {
+    display: flex;
+    justify-content: center;
+    background-color: slategray;
+}
+
+.placeholder-img p {
+    align-self: center;
+}
+
+.section-two {
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.section-two h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-two .container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.section-two .container .section-two-img .box {
+    width: 175px;
+    height: 175px;
+    box-sizing: border-box;
+    border: 5px solid #3882F6;
+    border-radius: 20px;
+    margin: 0;
+}
+
+.section-two .container .section-two-img p {
+    font-size: 18px;
+    color: gray;
+    text-align: center;
+    width: 175px;
+}
+
+.section-three {
+    background-color: #E5E7EB;
+    padding: 100px 25%;
+}
+
+.section-three .quote-text {
+    font-size: 36px;
+    color: #1F2937;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.section-three .quote-author {
+    font-weight: bold;
+    font-size: 24px;
+    color: #1F2937;
+    text-align: right;
+}
+
+.section-four {
+    padding: 100px 15%;
+}
+
+.section-four .container {
+    display: flex;
+    background-color: #3882F6;
+    border-radius: 15px;
+    padding: 50px 100px;
+    justify-content: space-between;
+}
+
+.section-four .container .flex-item h2 {
+    font-size: 24px;
+    color: #F9FAF8;
+}
+
+.section-four .container .flex-item p {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.section-four .container .flex-button {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.section-four .container .flex-item button {
+    border: 3px solid #F9FAF8;
+    border-radius: 10px;
+    padding: 5px 30px;
+    background-color: transparent;
+    font-size: 18px;
+    color: #F9FAF8;
+}
+
+.section-five {
+    padding: 50px 15%;
+    background-color: #1F2937;
+}
+
+.section-five p {
+    font-size: 18px;
+    color: #F9FAF8;
+    text-align: center;
+}
