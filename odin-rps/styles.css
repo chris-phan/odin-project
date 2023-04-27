@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+}
+
+#title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white
+}
+
+.btn-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+.btn-container button {
+    font-size: 18px;
+    font-weight: 900;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+}
+
+.container div {
+    max-width: 200px;
+    min-width: 200px;
+    text-align: center;
+}
+
+#choices-title, #scores-title {
+    font-size: 24px;
+    color: white;
+    text-decoration: underline;
+}
+
+.container p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.container #choices p span {
+    font-size: 16px;
+    color: orange;
+}
+
+.container #scores p span {
+    font-size: 16px;
+    color: greenyellow;
+}
+
+h2 {
+    text-align: center;
+    color: pink
+}

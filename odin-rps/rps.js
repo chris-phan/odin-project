@@ -1,3 +1,5 @@
+const WIN_CONDITION = 5;
+
 function get_computer_choice() {
 	choice = Math.floor(Math.random() * 3);
 	cpu_move = '';
@@ -19,11 +21,6 @@ function get_computer_choice() {
 	return cpu_move;
 }
 
-function get_player_choice() {
-	player_move = prompt('Enter your move: (rock, paper, or scissors)');
-	return player_move.toUpperCase();
-}
-
 function check_win(player_move, cpu_move) {
 	let winner = '';
 
@@ -42,51 +39,81 @@ function check_win(player_move, cpu_move) {
 	return winner;
 }
 
-function play_round() {
-	let player_move = '';
+function display_winner() {
+	let overall_winner_h2_tag = document.querySelector('#overall-winner');
+	let player_score = Number(
+		document.querySelector('#player-score').innerText
+	);
+	let cpu_score = Number(document.querySelector('#cpu-score').innerText);
+
+	if (player_score > cpu_score) {
+		overall_winner_h2_tag.innerText = `YOU WON with a score of ${player_score} to ${cpu_score}`;
+	} else {
+		overall_winner_h2_tag.innerText = `CPU WON with a score of ${cpu_score} to ${player_score}`;
+	}
+}
+
+function increment_score(winner) {
+	let score = -1;
+
+	if (winner === 'CPU') {
+		cpu_score_tag = document.querySelector('#cpu-score');
+		score = Number(cpu_score_tag.innerText) + 1;
+		cpu_score_tag.innerText = score + '';
+	} else {
+		player_score_tag = document.querySelector('#player-score');
+		score = Number(player_score_tag.innerText) + 1;
+		player_score_tag.innerText = score + '';
+	}
+
+	if (score === WIN_CONDITION) {
+		disable_player_choice_btns();
+		display_winner();
+	}
+}
+
+function play_round(player_move) {
 	let cpu_move = '';
 	let winner = '';
 
-	do {
-		player_move = get_player_choice();
-		cpu_move = get_computer_choice();
-		winner = check_win(player_move, cpu_move);
+	cpu_move = get_computer_choice();
+	winner = check_win(player_move, cpu_move);
 
-		if (winner === 'TIE') {
-			console.log(`Both chose ${player_move}. Tie.`);
-		}
-	} while (winner === 'TIE');
+	player_choice_tag = document.querySelector('#player-choice');
+	cpu_choice_tag = document.querySelector('#cpu-choice');
+	winner_tag = document.querySelector('#winner');
 
-	console.log(
-		`You picked ${player_move} and the computer picked ${cpu_move}\n**Winner: ${winner}**`
-	);
+	player_choice_tag.innerText = player_move;
+	cpu_choice_tag.innerText = cpu_move;
+	winner_tag.innerText = winner;
+
+	if (winner !== 'TIE') {
+		increment_score(winner);
+	}
 
 	return winner;
 }
 
-function best_of_five() {
-	let player_score = 0;
-	let cpu_score = 0;
+function add_player_choice_events() {
+	buttons = document.querySelectorAll('button');
 
-	while (player_score < 3 && cpu_score < 3) {
-		let winner = play_round();
+	buttons.forEach((button) => {
+		button.addEventListener('click', () => {
+			play_round(button.innerText);
+		});
+	});
+}
 
-		if (winner === 'CPU') {
-			cpu_score++;
-		} else {
-			player_score++;
-		}
-	}
+function disable_player_choice_btns() {
+	buttons = document.querySelectorAll('button');
 
-	if (player_score > cpu_score) {
-		console.log(`YOU WON with a score of ${player_score} to ${cpu_score}`);
-	} else {
-		console.log(`CPU WON with a score of ${cpu_score} to ${player_score}`);
-	}
+	buttons.forEach((button) => {
+		button.disabled = true;
+	});
 }
 
 function main() {
-	best_of_five();
+	add_player_choice_events();
 }
 
 window.addEventListener('load', () => {
