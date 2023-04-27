@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+#home-title {
+    margin-left: 5%;
+    margin-top: 20px;
+    color: white;
+}
+
+#sites-title {
+    margin-top: 20px;
+    margin-left: 7%;
+    font-size: 24px;
+    color: white;
+}
+
+ul li {
+    margin-top: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: greenyellow;
+    font-size: 18px;
+    margin-left: 9%;
+}
