@@ -6,9 +6,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Rock Paper Scissors Game</title>
 		<script src="./rps.js" defer></script>
+		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
-		<h1>Rock Paper Scissors Game</h1>
-		<p>Open console to play</p>
+		<h1 id="title">Rock Paper Scissors Game</h1>
+		<div class="btn-container">
+			<button id="rock-btn">ROCK</button>
+			<button id="paper-btn">PAPER</button>
+			<button id="scissors-btn">SCISSORS</button>
+		</div>
+		<div class="container">
+			<div id="choices">
+				<p id="choices-title">Choices</p>
+				<p>You chose: <span id="player-choice">0</span></p>
+				<p>CPU chose: <span id="cpu-choice">0</span></p>
+				<p>Winner: <span id="winner"></span></p>
+			</div>
+			<div id="scores">
+				<p id="scores-title">Scores</p>
+				<p>Your score: <span id="player-score">0</span></p>
+				<p>CPU score: <span id="cpu-score">0</span></p>
+			</div>
+		</div>
+		<h2 id="overall-winner"></h2>
 	</body>
 </html>
