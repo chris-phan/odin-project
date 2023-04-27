@@ -71,3 +71,19 @@ h2 {
     text-align: center;
     color: pink
 }
+
+.play-again-container {
+    display: flex;
+    justify-content: center;
+}
+
+#play-again-btn {
+    margin-top: 20px;
+    font-size: 18px;
+    background-color: slategray;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+}

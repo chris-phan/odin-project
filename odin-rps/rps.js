@@ -51,6 +51,12 @@ function display_winner() {
 	} else {
 		overall_winner_h2_tag.innerText = `CPU WON with a score of ${cpu_score} to ${player_score}`;
 	}
+
+	let play_again_btn = document.querySelector('#play-again-btn');
+	play_again_btn.addEventListener('click', () => {
+		window.location.reload();
+	});
+	play_again_btn.hidden = false;
 }
 
 function increment_score(winner) {
@@ -105,7 +111,7 @@ function add_player_choice_events() {
 }
 
 function disable_player_choice_btns() {
-	buttons = document.querySelectorAll('button');
+	buttons = document.querySelectorAll('.btn-container button');
 
 	buttons.forEach((button) => {
 		button.disabled = true;
