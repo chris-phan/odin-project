@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,700&family=Roboto:ital,wght@0,400;0,900;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.recipe-links li {
+    margin-top: 10px;
+    margin-left: 7%;
+    font-size: 18px;
+}
+
+.recipe-links li a {
+    text-decoration: solid underline yellowgreen 2px;
+    color: black;
+}
+
+.home-link {
+    text-decoration: solid underline yellowgreen 2px;
+    color: black;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.food-item {
+    margin-top: 10px;
+}
+
+#burger-img {
+    max-width: 250px;
+}
+
+h2 {
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.description-text {
+    margin-left: 7%;
+    max-width: 700px;
+}
+
+.list {
+    margin-left: 7%;
+}
+
+.list li {
+    margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.flex-item {
+    flex: 1 1 0;
+}
+
+.home-link-bottom {
+    margin-bottom: 5px;
+}
+
+.text, .letter {
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.cereal-img {
+    max-width: 400px;
+}
