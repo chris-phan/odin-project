@@ -1,0 +1,158 @@
+@import url('https://fonts.cdnfonts.com/css/norse');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,300;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.side-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: max-content;
+}
+
+#leaves-img {
+    height: 100vh;
+}
+
+.odin-logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 20%;
+}
+
+#odin-icon {
+    max-width: 75px;
+}
+
+#odin-text {
+    font-family: 'Norse';
+    color: white;
+    font-size: 4.5rem;
+}
+
+#photo-credit {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 2%;
+    color: white;
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+}
+
+#photo-credit a {
+    color: white;
+    text-decoration: underline solid white;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    background-color: rgb(230, 230, 230, 0.25);
+}
+
+.sign-up-text h2 {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    border: none;
+    box-shadow: 4px 4px 5px rgb(200, 200, 200, 1);
+    background-color: white;
+}
+
+fieldset h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(80, 80, 80);
+}
+
+input {
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 225px;
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid lightblue;
+    box-shadow: 2px 2px 5px rgb(230, 230, 230, 1);
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+.two-input-container {
+    display: flex;
+    gap: 75px;
+    margin-bottom: 25px;
+}
+
+form button {
+    margin-top: 30px;
+    margin-left: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: #596D48;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 50px;
+    box-shadow: 5px 5px 5px rgb(230, 230, 230, 1);
+}
+
+#has-account {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 1rem;
+}
+
+#has-account a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #596D48
+}
+
+#password-invalid {
+    font-size: 1rem;
+    visibility: hidden;
+    color: red
+}
+
+.error {
+    border: 2px solid red;
+}
