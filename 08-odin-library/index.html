@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="index.js" defer></script>
+		<title>Library</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="library-title">Library</h1>
+			<button class="show-form"></button>
+		</div>
+		<div class="form-container hidden">
+			<form>
+				<fieldset>
+					<h2>Add a book</h2>
+					<div class="label-and-input">
+						<label for="title" class="floating-label">Title</label>
+						<input
+							type="text"
+							name="title"
+							minlength="1"
+							maxlength="50"
+							class="text"
+							id="title"
+						/>
+					</div>
+					<div class="label-and-input">
+						<label for="author" class="floating-label"
+							>Author</label
+						>
+						<input
+							type="text"
+							name="author"
+							minlength="1"
+							maxlength="50"
+							class="text"
+							id="author"
+						/>
+					</div>
+					<div class="label-and-input">
+						<label for="num_pages" class="floating-label"
+							>Number of pages</label
+						>
+						<input
+							type="number"
+							name="num_pages"
+							min="1"
+							class="text"
+							id="num_pages"
+						/>
+					</div>
+					<div class="label-and-input book-read">
+						<label for="have_read">Finished reading?</label>
+						<input
+							type="checkbox"
+							name="have_read"
+							id="have_read"
+						/>
+					</div>
+
+					<button type="submit">Add book</button>
+				</fieldset>
+			</form>
+		</div>
+		<h2 class="catalogue-title">Catalogue</h2>
+		<div class="books"></div>
+	</body>
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.library-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-form {
+    background-color: lightcyan;
+    color: black;
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 2px solid lightblue;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    width: max-content;
+    box-sizing: border-box;
+}
+
+.show-form:hover {
+    background-color: rgba(224, 255, 255, 0.50);
+}
+
+.show-form::after {
+    content: "Show form";
+}
+
+.show-form.showing::after {
+    content: "Hide form";
+}
+
+div.hidden {
+    display: none;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 4px 4px 5px rgb(200, 200, 200, 1);
+}
+
+form h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.label-and-input {
+    position: relative;
+    padding-top: 20px;
+}
+
+.label-and-input label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.label-and-input .floating-label {
+    position: absolute;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 10px;
+    left: 8px;
+}
+
+.label-and-input .text {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    font-size: 1rem;
+}
+
+.text:focus {
+    outline: none;
+    border: 2px solid slateblue;
+    box-shadow: 2px 2px 5px rgb(230, 230, 230, 1);
+}
+
+.book-read {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+form button {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: lightgreen;
+}
+
+form button:hover {
+    background-color: rgba(144, 238, 144, 0.75);
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: minmax(350px, 1fr);
+    grid-auto-rows: minmax(300px, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px 50px;
+}
+
+.catalogue-title {
+    font-size: 1.5rem;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.book-card {
+    background-color: #FFD7B5;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.book-card .delete-book {
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    color: crimson;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.book-card .delete-book::after {
+    content: "X";
+}
+
+div.read {
+    background-color: #D1FFBD;
+}
+
+.book-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    inline-size: 350px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.book-card .mark-read {
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500px;
+    background-color: lightcyan;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.book-card .mark-read::after {
+    content: "Mark as read";
+}
+
+.mark-read.read::after {
+    content: "Mark as unread";
+}
+
+.book-card .mark-read:hover {
+    background-color: rgba(224, 255, 255, 0.75);
+}
