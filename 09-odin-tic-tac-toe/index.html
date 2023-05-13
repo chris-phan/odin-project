@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="./index.js"></script>
+		<title>Tic Tac Toe</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">Tic Tac Toe</h1>
+			<div class="button-group">
+				<button class="new-game">New game</button>
+				<button class="vs-dumb-cpu">VS Bot Binky</button>
+				<button class="vs-good-cpu">VS Bot Alan</button>
+			</div>
+		</div>
+		<div class="game">
+			<div class="board">
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+				<button class="board-cell"></button>
+			</div>
+			<div class="player player1">
+				<h2 class="player1-name">Player 1</h2>
+				<h3 class="score">
+					Score: <span class="player1-score">0</span>
+				</h3>
+				<form class="player1-change" data-player-num="1">
+					<h4>Change player</h4>
+					<fieldset>
+						<label for="name">New Name</label>
+						<input type="text" name="name" id="name1" />
+
+						<button type="submit">Save</button>
+					</fieldset>
+				</form>
+			</div>
+			<div class="player player2">
+				<h2 class="player2-name">Player 2</h2>
+				<h3 class="score">
+					Score: <span class="player2-score">0</span>
+				</h3>
+				<form class="player2-change" data-player-num="2">
+					<h4>Change player</h4>
+					<fieldset>
+						<label for="name">New Name</label>
+						<input type="text" name="name" id="name2" />
+
+						<button type="submit">Save</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<h2 class="result-text"></h2>
+	</body>
+</html>
