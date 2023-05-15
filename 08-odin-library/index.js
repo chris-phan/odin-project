@@ -1,18 +1,70 @@
-function Book(title, author, num_pages, have_read) {
-	this.title = title;
-	this.author = author;
-	this.num_pages = num_pages;
-	this.have_read = have_read;
-	this.info = () => {
+// *OLD*: function constructor for Book
+// function Book(title, author, num_pages, have_read) {
+// 	this.title = title;
+// 	this.author = author;
+// 	this.num_pages = num_pages;
+// 	this.have_read = have_read;
+// 	this.info = () => {
+// 		let book_info = `${this.title} by ${this.author}, ${this.num_pages},`;
+// 		if (!have_read) {
+// 			book_info = book_info + ' not read yet';
+// 		} else {
+// 			book_info = book_info + ' read';
+// 		}
+// 		return book_info;
+// 	};
+// }
+
+// *NEW*: class definition for Book
+class Book {
+	constructor(title, author, num_pages, have_read) {
+		this._title = title;
+		this._author = author;
+		this._num_pages = num_pages;
+		this._have_read = have_read;
+	}
+
+	get title() {
+		return this._title;
+	}
+
+	set title(title) {
+		this._title = title;
+	}
+
+	get author() {
+		return this._author;
+	}
+
+	set author(author) {
+		this._author = author;
+	}
+
+	get num_pages() {
+		return this._num_pages;
+	}
+
+	set num_pages(num_pages) {
+		this._num_pages = num_pages;
+	}
+
+	get have_read() {
+		return this._have_read;
+	}
+
+	set have_read(have_read) {
+		this.have_read = have_read;
+	}
+
+	info() {
 		let book_info = `${this.title} by ${this.author}, ${this.num_pages},`;
 		if (!have_read) {
 			book_info = book_info + ' not read yet';
 		} else {
 			book_info = book_info + ' read';
 		}
-		console.log(book_info);
 		return book_info;
-	};
+	}
 }
 
 function init_show_form_button() {
@@ -31,10 +83,7 @@ function init_form() {
 		const num_pages = document.querySelector('#num_pages').value;
 		const have_read = document.querySelector('#have_read').checked;
 
-		console.log({ title, author, num_pages, have_read });
-
 		const book = new Book(title, author, num_pages, have_read);
-		console.log(book);
 
 		create_book_card(book);
 	});
@@ -65,6 +114,7 @@ function create_book_card(book) {
 	num_pages.classList.add('num_pages');
 	toggle_read.classList.add('mark-read');
 
+	console.log('hehe');
 	title.innerText = book.title;
 	author.innerText = `By ${book.author}`;
 	num_pages.innerText = `${book.num_pages} pages`;
