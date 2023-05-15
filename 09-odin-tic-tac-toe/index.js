@@ -466,6 +466,7 @@ function DisplayController() {
 		const form_props = Object.fromEntries(form_data);
 		game_controller.set_player(player_num, form_props.name);
 		display_player(player_num);
+		display_score(game_controller.get_player(player_num));
 	};
 
 	const init_player_form = () => {
