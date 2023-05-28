@@ -100,7 +100,6 @@ const init_sort_form = () => {
 		let int_list = form_props.list.split(', ').map((num) => {
 			return Number(num);
 		});
-		console.log(int_list);
 		const res = merge_sort(int_list);
 		document.querySelector('.sort-res').textContent = res.join(', ');
 	});
@@ -109,9 +108,6 @@ const init_sort_form = () => {
 function main() {
 	init_fib_form();
 	init_sort_form();
-	console.log('whoohoo');
-	const nums = [10, 9, 8, 7, 5, 29, 19, 1, 0, -543, -2, 4, -5, 0, 9, 1];
-	console.log(merge_sort(nums));
 }
 
 window.addEventListener('load', () => {
