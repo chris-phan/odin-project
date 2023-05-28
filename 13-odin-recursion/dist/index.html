@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles.css" />
+		<script src="main.js"></script>
+		<title>Recursion</title>
+	</head>
+	<body>
+		<div class="content">
+			<h1 class="title">Recursion!</h1>
+			<div class="fib">
+				<h2>Fibonacci sequence</h2>
+				<form class="fib-form">
+					<label for="length"
+						>Generate the first __ Fibonacci Numbers</label
+					>
+					<div class="container">
+						<input type="number" name="length" min="1" max="9999" />
+						<button type="submit">Generate</button>
+					</div>
+				</form>
+				<p class="fib-res"></p>
+			</div>
+			<div class="sort">
+				<h2>Sort a list of integers</h2>
+				<form class="sort-form">
+					<label for="list">Integers</label>
+					<div class="container">
+						<input
+							type="text"
+							name="list"
+							pattern="^-?[0-9]+(, -?[0-9]+)*$"
+							title='Comma separated list of integers, example: "1, 3, -4, 20"'
+						/>
+						<button type="submit">Sort</button>
+					</div>
+				</form>
+				<p class="sort-res"></p>
+			</div>
+		</div>
+	</body>
+</html>
