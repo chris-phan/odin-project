@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="./styles/main_layout.css" />
+		<link rel="stylesheet" href="./styles/sidebar.css" />
+		<link rel="stylesheet" href="./styles/todo.css" />
+		<title>To Do List</title>
+	</head>
+	<body>
+		<div id="content">
+			<div class="sidebar">
+				<h1>ToDo List</h1>
+				<div class="sidebar-button sidebar-new-todo">
+					<button class="new-todo-btn">New ToDo</button>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<title>New ToDo</title>
+						<path
+							d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+						/>
+					</svg>
+				</div>
+				<dialog class="new-todo-modal">
+					<form>
+						<fieldset>
+							<div class="label-and-input">
+								<label for="title" class="floating-label"
+									>Name of ToDo</label
+								>
+								<input
+									type="text"
+									name="title"
+									class="text"
+									required
+								/>
+							</div>
+
+							<div class="label-and-input">
+								<label for="date" class="floating-label"
+									>Due date</label
+								>
+								<input
+									type="date"
+									name="date"
+									class="text"
+									required
+								/>
+							</div>
+
+							<div class="label-and-input">
+								<label for="description" class="floating-label"
+									>Description</label
+								>
+								<textarea
+									name="description"
+									class="text"
+									rows="3"
+								></textarea>
+							</div>
+
+							<div class="label-and-input">
+								<label for="notes" class="floating-label"
+									>Notes</label
+								>
+								<textarea
+									name="notes"
+									class="text"
+									rows="6"
+									cols="50"
+								></textarea>
+							</div>
+
+							<div class="add-checkbox">
+								<div class="floating-label">
+									<p>Add checkboxes</p>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										class="add-checkbox-btn"
+									>
+										<title>New checkbox</title>
+										<path
+											d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+										/>
+									</svg>
+								</div>
+								<div class="checkbox-container">
+									<div class="checkbox">
+										<label for="checkbox1">
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 24 24"
+											>
+												<title>Check</title>
+												<path
+													d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+												/>
+											</svg>
+										</label>
+										<input type="text" name="checkbox1" />
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 24 24"
+											class="delete-checkbox"
+										>
+											<title>Delete</title>
+											<path
+												d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M7,6H17V19H7V6M9,8V17H11V8H9M13,8V17H15V8H13Z"
+											/>
+										</svg>
+									</div>
+								</div>
+							</div>
+
+							<div class="dropdown">
+								<label for="priority">Priority:</label>
+								<select name="priority" id="priority">
+									<option value="low" selected>Low</option>
+									<option value="medium">Medium</option>
+									<option value="high">High</option>
+								</select>
+							</div>
+
+							<div class="form-buttons">
+								<button type="submit">Create</button>
+								<button
+									type="button"
+									value="cancel"
+									formmethod="dialog"
+								>
+									Close
+								</button>
+							</div>
+						</fieldset>
+					</form>
+				</dialog>
+				<div class="sidebar-button sidebar-projecst">
+					<button class="view-projects">View Projects</button>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<title>View projects</title>
+						<path
+							d="M11 15H17V17H11V15M9 7H7V9H9V7M11 13H17V11H11V13M11 9H17V7H11V9M9 11H7V13H9V11M21 5V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H19C20.1 3 21 3.9 21 5M19 5H5V19H19V5M9 15H7V17H9V15Z"
+						/>
+					</svg>
+				</div>
+			</div>
+			<div class="main-content">
+				<h1 class="current-project">Project Name</h1>
+				<div class="current-todos">
+					<h2>Current</h2>
+					<div class="todos-grid">
+						<div class="todo">
+							<div class="done-and-delete"></div>
+							<h2 class="todo-title">title</h2>
+							<p class="due-date">1/1/2023</p>
+							<p class="todo-description">description</p>
+						</div>
+						<div class="todo">
+							<h2 class="todo-title">title</h2>
+							<p class="todo-description">description</p>
+							<p class="due-date">1/1/2023</p>
+						</div>
+						<div class="todo">
+							<h2 class="todo-title">title</h2>
+							<p class="todo-description">description</p>
+							<p class="due-date">1/1/2023</p>
+						</div>
+						<div class="todo">
+							<h2 class="todo-title">title</h2>
+							<p class="todo-description">description</p>
+							<p class="due-date">1/1/2023</p>
+						</div>
+						<div class="todo">
+							<h2 class="todo-title">title</h2>
+							<p class="todo-description">description</p>
+							<p class="due-date">1/1/2023</p>
+						</div>
+						<div class="todo">
+							<h2 class="todo-title">title</h2>
+							<p class="todo-description">description</p>
+							<p class="due-date">1/1/2023</p>
+						</div>
+						<div class="todo">
+							<h2 class="todo-title">title</h2>
+							<p class="todo-description">description</p>
+							<p class="due-date">1/1/2023</p>
+						</div>
+					</div>
+				</div>
+				<div class="finished-todos">
+					<h2>Done</h2>
+					<div class="todos-grid-finished"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

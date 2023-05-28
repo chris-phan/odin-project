@@ -1,0 +1,214 @@
+.sidebar {
+    background-color: lightcyan;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.sidebar h1 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.sidebar .sidebar-button {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar button {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-button:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+.sidebar svg {
+    width: 20px;
+}
+
+dialog.new-todo-modal {
+    max-height: 80vh;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border: none;
+    border-radius: 15px;
+}
+
+dialog.new-todo-modal form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+label[for="title"]::after, label[for="date"]::after {
+    content: " *";
+    color: red;
+}
+
+.label-and-input {
+    position: relative;
+    padding-top: 20px;
+}
+
+.label-and-input label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.label-and-input .floating-label {
+    position: absolute;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 10px;
+    left: 8px;
+}
+
+.label-and-input .text {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 350px;
+    font-size: 1rem;
+}
+
+.text:focus {
+    outline: none;
+    border: 2px solid slateblue;
+    box-shadow: 2px 2px 5px rgb(230, 230, 230, 1);
+}
+
+textarea {
+    resize: none;
+}
+
+.add-checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+    position: relative;
+    padding-top: 20px;
+    width: 100%;
+    border: none;
+}
+
+.add-checkbox .floating-label {
+    position: absolute;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 10px;
+    left: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 10;
+    display: flex;
+    gap: 5px;
+}
+
+.add-checkbox .floating-label svg:hover {
+    fill: slateblue;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    border: 2px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.checkbox input {
+    border: 2px solid black;
+    border-radius: 3px;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 4px 4px;
+    font-size: 1rem;
+}
+
+.checkbox input:focus {
+    outline: none;
+    border: 2px solid slateblue;
+    box-shadow: 2px 2px 5px rgb(230, 230, 230, 1);
+}
+
+.checkbox .delete-checkbox:hover {
+    fill: red;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.dropdown label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dropdown select[name="priority"] {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.form-buttons button {
+    margin-top: 40px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    background-color: rgb(240, 240, 240);
+    transition: background-color 300ms linear;
+}
